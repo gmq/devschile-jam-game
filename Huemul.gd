@@ -20,3 +20,8 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 	if Input.is_action_just_pressed("ui_up"):
 		velocity.y = jump_speed
+
+	if velocity.x < 0:
+		$AnimatedSprite.set_flip_h(true)
+	else:
+		$AnimatedSprite.set_flip_h(false)
