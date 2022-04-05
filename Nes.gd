@@ -10,5 +10,5 @@ func _ready():
 
 func _on_Nes_body_entered(body):
 	if (body.get_name() == "Huemul"):
-		body.emit_signal('add_point')
+		body.get_node('../Hud').add_point()
 	queue_free()

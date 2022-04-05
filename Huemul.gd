@@ -4,7 +4,6 @@ export var speed = 250
 export var gravity = 1000
 export var jump_speed = -1000
 var velocity = Vector2.ZERO
-signal add_point
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

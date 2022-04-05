@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Huemul.tscn" type="PackedScene" id=1]
 [ext_resource path="res://forest.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://pincel.png" type="Texture" id=5]
 [ext_resource path="res://Pincel.gd" type="Script" id=6]
 [ext_resource path="res://Nes.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Hud.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -401,5 +402,7 @@ shape = SubResource( 12 )
 
 [node name="Spawn" type="Timer" parent="Pincel"]
 autostart = true
+
+[node name="Hud" parent="." instance=ExtResource( 8 )]
 
 [connection signal="timeout" from="Pincel/Spawn" to="Pincel" method="_on_Timer_timeout"]
